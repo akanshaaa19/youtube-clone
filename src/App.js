@@ -3,7 +3,7 @@ import "./App.css";
 import axios from 'axios'
 import Layout from "./components/Layout";
 import Feed from "./pages/Feed";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import Video from "./pages/Video";
 import Channel from "./pages/Channel";
 import Search from "./pages/Search";
@@ -11,7 +11,7 @@ import NotFound from "./pages/NotFound";
 function App() {
   
 
-  return <BrowserRouter>
+  return <HashRouter>
     <Layout>
       <Routes>
         <Route path="/" element={<Feed />} />
@@ -21,7 +21,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>
-  </BrowserRouter>;
+  </HashRouter>;
 }
 
 export default App;
